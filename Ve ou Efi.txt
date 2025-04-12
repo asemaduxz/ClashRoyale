@@ -1,0 +1,27 @@
+1. O elemento <h1> é usado para criar o título principal de uma página. 
+2. O atributo src é usado em imagens para definir o link de um arquivo de estilo CSS. 
+3. A tag <p> é usada para criar parágrafos de texto. 
+4. O atributo href é utilizado para definir o destino de um link em uma tag <a>. 
+5. A tag <br> é usada para criar uma linha horizontal na página. 
+6. A tag <ul> é utilizada para criar listas ordenadas. 
+7. É possível estilizar um parágrafo alterando a cor do texto com o atributo color dentro 
+da tag <p>. 
+8. O atributo alt em uma tag <img> define o texto alternativo para a imagem. 
+9. As folhas de estilo em cascata (CSS) são incorporadas no HTML usando a tag 
+<style>.
+10. A tag <input> é usada apenas para criar botões de envio em formulários. 
+11. A tag <title> define o título da página que aparece na aba do navegador. 
+12. Para aplicar um estilo a todas as tags <p> em uma página, é necessário escrever o 
+nome da tag no CSS seguido de um par de chaves. 
+13. O CSS usa a propriedade font-size para definir o tamanho do texto. 
+14. A tag <ol> é usada para criar listas não ordenadas. 
+15. O atributo id pode ser aplicado a vários elementos em uma mesma página para 
+estilizá-los da mesma forma. 
+16. O atributo class pode ser usado para aplicar o mesmo estilo a vários elementos em 
+uma página. 
+17. A tag <body> contém todo o conteúdo visível de uma página da web. 
+18. No CSS, a propriedade margin é usada para definir o espaço interno de um elemento. 
+19. O elemento <a> pode ser usado para criar links que abrem uma nova aba no 
+navegador ao usar o atributo target="_blank". 
+20. O atributo src é utilizado para definir o endereço da imagem que será exibida em uma 
+tag <img>.

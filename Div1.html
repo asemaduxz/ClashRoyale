@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        /* dashed é tracejado */
+        border: 3px dashed violet;
+}
+</style>
+<body>
+    <!-- a gente ta criando uma div -->
+    <div> Isso, estranhamente confuso, é uma div</div>
+    <!-- hr é uma linha pra ficar mais fácil de ver a margem -->
+     <hr>
+
+     <!-- agr a gente vai criar a margem -->
+     <div style="margin: 25px;"> isso é uma div com margem </div>
+     <hr>
+     <div style="margin-top: 25px;"> essa aqui ta com a margem em cima</div>
+     <hr>
+     <div style="margin-bottom: 25px;"> essa aqui ta com a margem em baixo</div>
+     <hr>
+     <div style="margin-left: 25px;"> essa aqui ta com a margem na esquerda</div>
+     <hr>
+     <div style="margin-right: 25px;"> essa aqui ta com a margem na direita</div>
+     <hr>
+     <!-- margin = margem
+          top= encima
+          bottom= embaixo
+          left= esquerda
+          right= direita -->
+     
+    <!-- mas, pra nos complicar, da pra colocar margem em varios lados diferentes -->
+    <!-- no caso, aqui funciona como "y,x" -->
+    <div style="margin: 20px 30px;"> 20px verticalmente e 30px horizontalmente </div>
+    <hr>
+    <div style="margin: 10px 20px 30px 40px;"> 10px em cima; 20px na direita; 30px embaixo; 40px na esquerda</div>
+    <hr>
+    
+    <!-- div com padding -->
+    <div style="padding: 25px">div com padding</div>
+    <hr>
+
+    <!-- Padding mas apenas lateralmente
+    top - em cima
+    bottom - embaixo
+    left - esquerda
+    right - direita 
+    -->
+    <!-- padding é uma margem dentro da margem (confuso) -->
+
+    <div style="padding-top: 25px;"> Div com um padding em cima </div>
+    <hr>
+    <div style="padding-bottom: 25px;"> Div com um padding embaixo </div>
+    <hr>
+    <div style="padding-left: 25px;"> Div com um padding esquerda </div>
+    <hr>
+    <div style="padding-right: 25px;"> Div com um padding direita </div>
+    <hr>
+
+    <!-- padding em mais de um lado -->
+    <div style="padding: 25px 100px;"> 25px em cima e embaixo; 100px nos lados </div>  
+    <hr>
+
+    <div style="padding: 0px 25px 100px;"> 0px em cima; 25px nos lados; 100px embaixo </div>  
+    <hr>
+
+    <div style="padding: 0px 25px 100px 150px;"> 0px em cima; 25px na direita; 100px embaixo; 150px na esquerda </div>  
+    <hr>
+
+    <div style="padding-left: 100px; padding-top: 50px"> pode escrever margin-algumacoisa mais de uma vez </div>  
+    <hr>
+</body>
+</html>

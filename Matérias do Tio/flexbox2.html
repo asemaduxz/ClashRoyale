@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 3px dashed red;
+            padding: 2px;
+        }
+        .container{
+            border: 3px dashed blue;
+            display: flex;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- align-items
+     start, end, center, stretch, baseline -->
+    <div class="container" style="flex-direction: row; align-items: start;">
+        <div> Esta é a 1  </div>
+        <div> Esta é a 2  </div>
+        <div> Esta é a 3  </div>
+    </div>
+    <hr>
+    <div class="container" style="flex-direction: row; align-items: end;">
+        <div> Esta é a 1  </div>
+        <div> Esta é a 2  </div>
+        <div> Esta é a 3  </div>
+    </div>
+    <hr>
+    <div class="container" style="flex-direction: row; align-items: center;">
+        <div> Esta é a 1  </div>
+        <div> Esta é a 2  </div>
+        <div> Esta é a 3  </div>
+    </div>
+    <hr>
+    <div class="container" style="flex-direction: row; align-items: stretch;">
+        <div> Esta é a 1  </div>
+        <div> Esta é a 2  </div>
+        <div> Esta é a 3  </div>
+    </div>
+    <hr>
+
+    <div class="container" style="flex-direction: row; align-items: center; justify-content: space-evenly;">
+        <div> Esta é a 1  </div>
+        <div> Esta é a 2  </div>
+        <div> Esta é a 3  </div>
+    </div>
+    <hr>
+    
+
+    
+</body>
+</html>
