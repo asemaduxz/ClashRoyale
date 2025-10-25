@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Cadastro de Usuário</h1>
+
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome"> <br><br>
+
+    <label for="email">Email: </label>
+    <input type="text" id="email"> <br><br>
+
+    <label for="senha">Senha: </label>
+    <input type="text" id="senha"> <br><br>
+
+    <button onclick="cadastrar()"> Cadastrar </button>
+    <button onclick="login()"> Login </button>
+
+    <br><br>
+
+    <div style="border: 1px dashed black; height: 30px;" id="resposta"></div>
+
+    <script>
+
+        let usuarios = {
+            "fulano@techers.com": {
+                nome: "Fulano", 
+                senha: "123abc"
+            }
+        }
+
+        function cadastrar()
+        {
+            //referência dos elementos da página
+            let nome_usuario = document.getElementById("nome").value;
+            let email_usuario = document.getElementById("email").value;
+            let senha_usuario = document.getElementById("senha").value;
+            let div = document.getElementById("resposta");
+
+            //verificar se nome, email e senha foram preenchidos
+            if(nome_usuario && email_usuario && senha_usuario)
+            {
+                //verificar se o usuário NÃO está cadastrado
+                if(!usuarios[email_usuario])
+                {
+                    usuarios[email_usuario] = {
+                        nome: nome_usuario, 
+                        senha: senha_usuario
+                    }
+                    div.innerHTML = "Cadastro realizado com sucesso.";
+                }
+                else //se ele tiver cadastrado
+                {
+                    div.innerHTML = "Email já cadastrado.";
+                }
+            }
+            else{ //caso nome, email e senha não forem preenchidos
+                div.innerHTML = "Por favor, preencha todos os campos para cadastrar.";
+            }
+        }
+
+        function login()
+        {
+            //referência dos elementos da página
+            let email_usuario = document.getElementById("email").value;
+            let senha_usuario = document.getElementById("senha").value;
+            let div = document.getElementById("resposta");
+
+            //verificar se email e senha foram preenchidos
+            if(email_usuario && senha_usuario)
+            {
+                //verificar se o usuario está cadastrado
+                if(usuarios[email_usuario])
+                {
+                    //verificar se o email do usuario é igual ao cadastrado
+                    if(usuarios[email_usuario][senha] == senha_usuario)
+                    {
+                        div.innerHTML = "Login realizado";
+                    }
+                }
+                else{ //usuário não cadastrado
+                    div.innerHTML = "Email não cadastrado.";
+                }
+            }
+            else{ //caso email e senha não forem preenchidos
+                div.innerHTML = "Por favor, preencha todos os campos para cadastrar.";
+            }
+        }
+    </script>
+
+
+</body>
+</html>

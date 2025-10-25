@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jokempô</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .opcoes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .opcoes img {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .opcoes img:hover {
+      transform: scale(1.1);
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px;
+    }
+
+    #vitoria {
+      color: rgb(24, 215, 24);
+    }
+
+    #derrota {
+      color: red;
+    }
+
+    #empate {
+      color: gray;
+    }
+
+    #mensagem {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    #imagemResultado {
+      margin-top: 20px;
+      display: block;
+      width: 120px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <h1> Jokempô </h1>
+
+  <div class="opcoes">
+    <img src="pedra.jpeg" alt="Pedra" onclick="jokempo('pedra')" />
+    <img src="papel.jpeg" alt="Papel" onclick="jokempo('papel')" />
+    <img src="tesoura.jpeg" alt="Tesoura" onclick="jokempo('tesoura')" />
+  </div>
+
+  <div>
+    <p id="vitoria">Vitórias: 0</p>
+    <p id="derrota">Derrotas: 0</p>
+    <p id="empate">Empates: 0</p>
+  </div>
+
+  <div id="mensagem"></div>
+  <img id="imagemResultado" src="" alt="Resultado da rodada" style="display:none;" />
+
+  <script>
+    let vitorias = 0;
+    let derrotas = 0;
+    let empates = 0;
+
+    function jokempo(escolha) {
+      const opcoes = ["pedra", "papel", "tesoura"];
+      const pc = opcoes[Math.floor(Math.random() * 3)];
+
+      const mensagem = document.getElementById("mensagem");
+      const imagemResultado = document.getElementById("imagemResultado");
+
+      imagemResultado.style.display = "block";
+
+      //comparações para saber quem ganhou
+      if (escolha === pc) {
+        empates++;
+        document.getElementById("empate").textContent = "Empates: " + empates;
+        mensagem.textContent = "Empatou! Ambos escolheram " + pc + ".";
+        mensagem.style.color = "gray";
+        imagemResultado.src = "empate.jpeg";
+      } else if (
+        (escolha === "pedra" && pc === "papel") ||
+        (escolha === "papel" && pc === "tesoura") ||
+        (escolha === "tesoura" && pc === "pedra")
+      ) {
+        derrotas++;
+        document.getElementById("derrota").textContent = "Derrotas: " + derrotas;
+        mensagem.textContent = "Você perdeu! O computador escolheu " + pc + ".";
+        mensagem.style.color = "red";
+        imagemResultado.src = "derrota.jpeg";
+      } else {
+        vitorias++;
+        document.getElementById("vitoria").textContent = "Vitórias: " + vitorias;
+        mensagem.textContent = "Você venceu! O computador escolheu " + pc + ".";
+        mensagem.style.color = "green";
+        imagemResultado.src = "vitória.jpeg";
+      }
+    }
+  </script>
+</body>
+
+</html>

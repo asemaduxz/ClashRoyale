@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Cadastro de Usuário </h1>
+
+    <label> Nome: </label>
+    <input type="text" id="nome_cadastro"> <br>
+    <label> Email: </label>
+    <input type="email" id="email_cadastro"> <br>
+    <label> Senha: </label>
+    <input type="password" id="senha_cadastro"> <br>
+
+    <button onclick="CadastroUsuario()"> Cadastrar </button> <br><br><br><br>
+    
+    <div id="mensagem_cadastro">
+    </div>
+
+    <hr>
+
+      <h2> Login de Usuário </h2>
+
+    <label> Nome: </label>
+    <input type="text" id="nome_login"> <br>
+    <label> Senha: </label>
+    <input type="password" id="senha_login"> <br>
+
+    <button onclick="LoginUsuario()"> Login </button> <br><br><br><br>
+    
+    <div id="mensagem_login">
+    </div>
+
+   <script>
+    // Variáveis globais para guardar dados cadastrados
+    var nomeCadastrado = "";
+    var emailCadastrado = "";
+    var senhaCadastrada = "";
+
+    function CadastroUsuario() {
+      var nome = document.getElementById("nome_cadastro").value.trim();
+      var email = document.getElementById("email_cadastro").value.trim();
+      var senha = document.getElementById("senha_cadastro").value.trim();
+      var mensagem = document.getElementById("mensagem_cadastro");
+
+      if (nome === "" || email === "" || senha === "") {
+        mensagem.innerHTML = "Por favor, preencha todos os campos.";
+      } else {
+        nomeCadastrado = nome;
+        emailCadastrado = email;
+        senhaCadastrada = senha;
+        mensagem.innerHTML = "Cadastro concluído com sucesso!";
+      }
+    }
+
+    function LoginUsuario() {
+      var nome = document.getElementById("nome_login").value.trim();
+      var senha = document.getElementById("senha_login").value.trim();
+      var mensagem = document.getElementById("mensagem_login");
+
+      if (nome === "" || senha === "") {
+        mensagem.innerHTML = "Por favor, preencha todos os campos.";
+        return;
+      }
+
+      if (nome === nomeCadastrado && senha === senhaCadastrada) {
+        mensagem.innerHTML = "Login concluído!";
+      } else {
+        mensagem.innerHTML = "Nome ou senha incorretos.";
+      }
+    }
+  </script>
+</html>

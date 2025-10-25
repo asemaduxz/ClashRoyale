@@ -1,0 +1,21 @@
+body{
+    background-color: white;
+    margin: 0;  /* retira o espaçamento de margem do body */  
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header{
+    justify-content: center;
+}
+#header img{
+ text-align: right;
+ display: flex;
+ justify-content: right;
+}
+#div-central{
+    font-size: 10px;
+    padding-left: 5px;
+}
+#remember{
+    border-left: 5px;
+}
